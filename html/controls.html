@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pierre Nagorny's ESP8266 car robot</title>
+    <meta charset="utf-8" />
+    <!-- shortcut::../html/favicon.ico -->
+    <!-- build:css style.css -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- endbuild -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+</head>
+
+<body>
+<!--  onload="myFunction() -->
+    <h3>Pierre Nagorny's ESP8266 car robot</h3>
+    <div id="loader" class="fadeIn">
+        <div class="spinner"></div>
+        <p>Waiting for connection...</p><strong id="wsmsg"></strong>
+    </div>
+    <div id="main" class="fadeIn">
+        <div class="halfChart">
+            <canvas id="chart"></canvas>
+        </div>
+        <div class="data">
+            <div id="data">No data</div>
+        </div>
+        <table class="controller">
+            <tr>
+                <td></td>
+                <td><button id="forward" class="button">▲</button></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><button id="left" class="button">◀</button></td>
+                <td>❤</td>
+                <td><button id="right" class="button">▶</button></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button id="backward" class="button">▼</button></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <!-- build:js script.js -->
+    <!-- <script type="text/javascript" src="./vendor/Chart.min.js"></script> -->
+    <script type="text/javascript" src="./car.js"></script>
+    <!-- endbuild -->
+</body>
+
+</html>
